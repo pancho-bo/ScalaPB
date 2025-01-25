@@ -68,7 +68,7 @@ class ProtobufGenerator(
                 " with "
               )} {""")
             .indented(
-              _.add(s"val index = ${v.getIndex}")
+              _.add(s"final val index = ${v.getIndex}")
                 .add(s"""val name = "${v.getName}"""")
                 .print(valuesByNumber(v.getNumber)) { case (p, u) =>
                   p.add(s"override def ${u.isName}: _root_.scala.Boolean = true")
